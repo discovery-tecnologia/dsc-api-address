@@ -1,0 +1,59 @@
+{
+  "name": "dsc-node-cep",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "apidoc": {
+    "title": "Documentação da API",
+    "description": "Esta documentação descreve os recursos disponibilizados pela API. Caso algum recurso retorne um erro 5xx ou a documentação possua alguma discordância entre em contato com o administrador.",
+    "url": "http://<api_domain>:<port>",
+    "order": [
+      "Teste",
+      "Login",
+      "Logout",
+      "Users",
+      "Listar",
+      "Recuperar",
+      "Criar",
+      "Atualizar",
+      "Excluir"
+    ],
+    "template": {
+      "withCompare": false,
+      "withGenerator": false
+    }
+  },
+  "dependencies": {
+    "async": "^1.5.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "1.15.2",
+    "cookie-parser": "1.4.3",
+    "debug": "~2.2.0",
+    "express": "4.14.0",
+    "express-myconnection": "^1.0.4",
+    "express-validator": "^2.18.0",
+    "fs": "0.0.2",
+    "jwt-simple": "^0.5.0",
+    "lodash": "^4.13.1",
+    "mkdirp": "^0.5.1",
+    "moment": "^2.10.6",
+    "mongoose": "^4.5.3",
+    "mongoose-paginate": "^5.0.0",
+    "mongoose-slug-generator": "^1.0.4",
+    "mongoose-validator": "^1.2.5",
+    "morgan": "~1.7.0",
+    "multiparty": "^4.1.2",
+    "mysql": "^2.11.1",
+    "path": "^0.12.7",
+    "request": "^2.72.0",
+    "sprintf-fast-js": "0.0.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "apidoc": "^0.16.1",
+    "gulp": "^3.9.0",
+    "gulp-apidoc": "^0.2.2"
+  }
+}
