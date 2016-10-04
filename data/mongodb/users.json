@@ -1,0 +1,13 @@
+[
+  {
+    "realm": "string",
+    "username": "alhaag",
+    "credentials": {},
+    "challenges": {},
+    "email": "andreluizhaag@gmail.com",
+    "emailVerified": true,
+    "status": "string",
+    "created": "2016-09-30",
+    "lastUpdated": "2016-09-30"
+  }
+]

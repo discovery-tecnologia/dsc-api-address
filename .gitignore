@@ -1,40 +1,19 @@
-### Project ###
-.git/
-/node_modules/
-
-### Vagrant ###
-.vagrant
-
-### Windows ###
-Thumbs.db
-Desktop.ini
-$RECYCLE.BIN/
-
-### OSX ###
-.DS_Store
-.AppleDouble
-.LSOverride
-Icon
-._*
-.Spotlight-V100
-.Trashes
-
-### IntelliJ based IDE's like PhpStorm ###
+*.csv
+*.dat
 *.iml
-*.ipr
-*.iws
-.idea/
-
-### NetBeans ###
-/nbproject/
-/build/
-/nbbuild/
-/dist/
-/nbdist/
-nbactions.xml
-nb-configuration.xml
-build.xml
-build.properties
-
-### SublimeText ###
-*.sublime-workspace
+*.log
+*.out
+*.pid
+*.seed
+*.sublime-*
+*.swo
+*.swp
+*.tgz
+*.xml
+.DS_Store
+.idea
+.project
+.strong-pm
+coverage
+node_modules
+npm-debug.log
