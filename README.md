@@ -83,4 +83,5 @@ Esta API está em desenvolvimento. Pendências:
  * Implementar backup
  * Implementar deploy
  * Implementar variáveis de ambiente
+ * Teste automatizados
 
