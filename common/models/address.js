@@ -6,30 +6,30 @@ module.exports = function(Address) {
     /**
      * Rest create event
      */
-    Address.afterRemote('create', function(ctx, user, next) {
+    /*Address.afterRemote('create', function(ctx, user, next) {
         console.log('create');
         next();
-    });
+    });*/
 
     /**
      * Rest update event
      */
-    Address.afterRemote('update', function(ctx, user, next) {
+    /*Address.afterRemote('update', function(ctx, user, next) {
         console.log('update');
         next();
-    });
+    });*/
 
     /**
      * Internal event
      */
-    Address.observe('before save', function(ctx, next) {
+    /*Address.observe('before save', function(ctx, next) {
         if (ctx.isNewInstance) {
             // create
         } else {
             // update
         }
         next();
-    });
+    });*/
 
     // Google Maps API has a rate limit of 10 requests per second
     // Seems we need to enforce a lower rate to prevent errors
@@ -55,25 +55,17 @@ module.exports = function(Address) {
 
     Address.cep = function(cep, cb) {
         Address.findOne({where: {cep: cep}}, function(err, address) {
-
             console.log(address);
-            
             // geo code the address
             lookupGeo(address.logradouro, address.localidade, address.cep, function(err, result) {
-
                 console.log(result);
-
                 if (result && result[0]) {
                     address.geo = result[0];
-
                     cb(null, address);
-                    //next();
                 } else {
-                    //TODO: Need to find out how to handle this with better a UX experience
-                    next(new Error('could not find location'));
+                    cb(new Error('Could not find geo location.'));
                 }
             });
-
             // persiste o novo endereço
             /*Address.create(address, function (err, newAddress) {
                 console.log('Created: ', newAddress.toObject());
